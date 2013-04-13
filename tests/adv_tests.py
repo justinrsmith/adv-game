@@ -27,7 +27,7 @@ def test_Shop():
 	shop = Shop('Paperboy', 'Subway')
 	shop.Action()
 	
-def rest_Test():
+def test_Rest():
 	rest = Rest('Paperboy', 'Subway')
 	rest.Action()
 	
@@ -43,12 +43,13 @@ def test_Subway():
 	subway = Subway('Paperboy','Downtown')
 	subway.Action()
 	
-#def test_Tunnels():
-#	tunnels = Tunnels('Paperboy','Subway')
-#	tunnels.Action()
+def test_Tunnels():
+	tunnels = Tunnels('Paperboy','Subway')
+	tunnels.Action()
 	
-#def test_Battle():
-	#battle = Battle('Downtown')
-	#battle.Action()
-	#battle.Attack(200,150,75,50,'Crony')
-	#battle.Defend(200,150,75,50,'Crony')
+def test_Battle():
+	buildhero = BuildHero('Paperboy')
+	battle = Battle(buildhero)
+	battle.Action()
+	battle.Attack(200,150,75,50,'Crony')
+	battle.Defend(200,150,75,50,'Crony')

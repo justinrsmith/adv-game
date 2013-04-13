@@ -1,10 +1,19 @@
-class Battle(BuildHero):
+import random
+#from adv.game import BuildHero
 
-	def __init__(self, location):
+testinput = 1
+
+class Battle():
+
+	def __init__(self,  location):
 		self.location = location
 		self.enemyAttr = []
-		BuildHero.__init__(self, 'Paperboy')
-		
+		self.Health = 200
+		self.Damage = 100
+		self.Name = 'Paperboy Johnny'
+#		self.test = bhero
+	#	self.Health = bhero.Health
+
 	def attack(*args):
 		"""
 		Function for handling attacking
@@ -31,7 +40,7 @@ class Battle(BuildHero):
 			print "1. Attack 2. Defend 3. Item"
 			atkChoice = testinput#int(raw_input("<  "))	
 				
-	def Action(self):
+	def Action(hero):
 		"""
 		Handle battle actions
 			-much work to be done
@@ -66,9 +75,11 @@ class Battle(BuildHero):
 		atkChoice = testinput#int(raw_input("<  "))
 
 		if atkChoice == 1:
+			#pass
 			self.Attack(self.Health, self.enemyAttr[0], self.Damage, self.enemyAttr[1], randEnemy)
 		elif atkChoice == 2:
-			self.Defend(self.Health, self.enemyAttr[0], self.Damage, self.enemyAttr[1], randEnemy)
+			pass
+		#	self.Defend(self.hero.Health, self.enemyAttr[0], self.hero.Damage, self.enemyAttr[1], randEnemy)
 		else:
 			print "item"
 		
@@ -110,7 +121,7 @@ class Battle(BuildHero):
 		newenemyDMG = enemyDMG / 2
 		
 		while(flag==0):
-			print '%r Defends' % (self.Name)
+			print '%r Defends' % (self.hero.Name)
 			print 'Enemy %r deals %r damage\n' % (randEnemy, newenemyDMG)
 			heroHP = heroHP - newenemyDMG
 			if heroHP <= 0:

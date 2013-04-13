@@ -6,9 +6,9 @@ except ImportError:
 config = {
 	'description': 'My Project',
 	'author': 'Justin Smith',
-	'url', 'URL to get it at.',
+	'url': 'URL to get it at.',
 	'download_url': 'Where to download it.',
-	'authoer_email': 'justinrsmith88@gmail.com',
+	'author_email': 'justinrsmith88@gmail.com',
 	'version': '0.1',
 	'install_requires': ['nose'],
 	'packages': ['adv'],
